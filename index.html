@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web2Lead</title>
+    <link rel="stylesheet" href="web2lead.css"/>
+    <script src="web2lead.js"></script> 
+</head>
+<body>
+    <h1>Create Lead</h1>
+    <form 
+        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D2t000000e2bU" 
+        method="POST"
+        onsubmit="beforesubmit()">
+    
+    <input type=hidden name="oid" value="00D2t000000e2bU">
+    <input type=hidden name="retURL" value="">
+    <input type="hidden" name="Lead_Date__c" class="outputleaddate"/>
+    
+    
+    <label for="first_name">First Name</label>
+    <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+    
+    <label for="last_name">Last Name</label>
+    <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true" /><br>
+    
+    <label for="email">Email</label>
+    <input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+    
+    <label for="company">Company</label>
+    <input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+    
+    <label for="Lead Date" aria-required="true">Lead Date</label>
+    <input type="date" class="inputleaddate"/>
+
+    <!--Lead Date:<span class="dateInput dateOnlyInput"><input  id="00N2t0000030ZRJ" name="00N2t0000030ZRJ" size="12" type="text" /></span><br> -->
+    
+    <input class="submit" type="submit" name="submit">
+    
+    </form>
+    
+</body>
+</html>
